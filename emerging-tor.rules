@@ -38,7 +38,7 @@
 
 
 #  VERSION 5895
-
+# TEST for UPDATE
 #  Updated 2025-05-20 00:30:01
 
 alert tcp [102.130.117.167,102.130.127.117,102.211.56.12,102.211.56.13,102.211.56.250,103.109.101.105,103.126.161.54,103.146.203.11,103.164.54.199,103.193.179.233] any -> $HOME_NET any (msg:"ET TOR Known Tor Exit Node TCP Traffic group 1"; flags:S; reference:url,doc.emergingthreats.net/bin/view/Main/TorRules; threshold: type limit, track by_src, seconds 60, count 1; classtype:misc-attack; flowbits:set,ET.TorIP; sid:2520000; rev:5895; metadata:affected_product Any, attack_target Any, deployment Perimeter, tag TOR, signature_severity Informational, created_at 2008_12_01, updated_at 2025_05_20;)
